@@ -1,0 +1,21 @@
+.homecarcdsrow1{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 80%;
+    background-color: rgb(200, 208, 224);
+}
+.homecarcdsrow2{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    max-width:60%;
+    background-color: rgb(200, 208, 224);
+}
+.homecarcdsrow3{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 90%;
+    background-color:rgb(200, 208, 224);
+}

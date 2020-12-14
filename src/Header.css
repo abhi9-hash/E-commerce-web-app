@@ -1,0 +1,48 @@
+.header{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color:rgb(4, 14, 58);
+    margin: 0;
+    position:sticky;
+    z-index: 100;
+    color: white;
+    
+}
+.header_search{
+ display: flex;
+ align-self:right;
+ flex: 1;
+ margin:5px 10px;
+ align-items: center;
+}
+.header_logo{
+ display: flex;
+ margin-left: 5px;
+ color:white;
+}
+
+.header_search_input{
+ height: fit-content;
+ width: 100%;
+ padding: 10px;
+}
+.header_search_icon{
+ background-color: royalblue;
+ height:fit-content;
+ width :10%;
+ padding:10px;
+}
+.header_nav{
+ color:white;
+ display: flex;
+ justify-content:space-between;
+ margin-right: 10px;
+}
+.header_nav_option1{
+ margin-right: 15px;
+}
+.header_cart{
+    margin-right: 10px;
+}
