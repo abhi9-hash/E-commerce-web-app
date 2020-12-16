@@ -4,7 +4,6 @@ import './Home.css'
 function Home() {
     return (
         <div className='home'>
-            <div className='homecarcdsrow1'>
                 <Productcard
                 id='100001'
                 category='mobile'
@@ -29,8 +28,7 @@ function Home() {
                 image='https://rukminim1.flixcart.com/image/832/832/k5lcvbk0pkrrdj/mobile-refurbished/s/7/x/redmi-note-8-pro-64-c-m1906g7i-mi-6-original-imafhgsa77msdgng.jpeg?q=70'
                 rating={5}
                 />
-            </div>
-            <div className='homecarcdsrow2'>
+        
                 <Productcard
                 id='100011'
                 category='electronics'
@@ -47,8 +45,7 @@ function Home() {
                 image='https://rukminim1.flixcart.com/image/832/832/kc9eufk0pkrrdj/iron-refurbished/g/g/5/c-np-035-non-stick-compact-light-weight-chartbusters-original-imaftgu6rfwgpz65.jpeg?q=70'
                 rating={5}
                 />
-            </div>
-            <div className='homecarcdsrow3'>
+            
                 <Productcard
                 id='100021'
                 category='interiors'
@@ -65,7 +62,7 @@ function Home() {
                 image='https://rukminim1.flixcart.com/image/416/416/jhs0o7k0/sofa-sectional/5/f/x/black-na-nano-bharat-lifestyle-black-grey-original-imaf5q3ghqnczgf9.jpeg?q=70'
                 rating={4}
                 />
-            </div>
+            
         </div>
     )
 }

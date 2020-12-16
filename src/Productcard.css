@@ -3,10 +3,6 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    max-width:30%;
-    height: 430px;
-    margin:15px;
-    padding: 20px;
     z-index: 1;
     background:white;
 }
