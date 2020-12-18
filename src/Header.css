@@ -16,7 +16,7 @@
  align-self:right;
  flex: 1;
  margin:5px 10px;
- align-items: center;
+ align-items: stretch;
 }
 .header_logo{
  display: flex;
