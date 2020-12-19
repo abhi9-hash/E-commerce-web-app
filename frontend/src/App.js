@@ -1,15 +1,18 @@
 import React from 'react';
-import Header from './Header'
-import Home from './Home'
+
+import Home from './screens/Home'
+import {BrowserRouter,Route} from 'react-router-dom'
+//import {browserHistory} from 'react-dom'
+import Productscreen from './screens/Productscreen';
 
 function App() {
   return (
-    
+    <BrowserRouter > 
     <div className="App">
-      <Header/>
-      <Home/>
-      
+    <Route path="/product/:id" component={Productscreen}/>
+      <Route path="/" component={Home} exact/>
     </div>
+    </BrowserRouter>
   );
 }
 

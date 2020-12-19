@@ -1,10 +1,12 @@
 import React from 'react';
-import Productcard from './Productcard'
-import data from './data.js';
+import Productcard from '../Productcard'
+import data from '../data.js';
+import Header from '../Header'
 import './Home.css'
 function Home() {
     return (
-        
+        <div>
+        <Header/>
         <div className='home'>
                 {
                 data.products.map((i)=>(
@@ -20,6 +22,7 @@ function Home() {
                 ))
                 }
             
+        </div>
         </div>
     )
 }
