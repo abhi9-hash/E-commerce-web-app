@@ -1,6 +1,11 @@
-.header{
+.header2{
     position: fixed;
+    padding-top: 40px;
+    width: 100%;
+    background-color: white;
+    margin-left: 5px;
 }
+
 
 .page-grid{
     padding-top: 60px;
@@ -25,11 +30,21 @@
     justify-content: space-evenly;
 }
 
-.Productinfo2>p,.Productinfo1>p{
+.Productinfo2>p ,.Productinfo1>p{
     display: flex;
     text-align: center;
     
 }
+.Productinfo2>button{
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    width: 40%;
+    height: 25px;
+    text-align: center;
+    background-color: rgb(224, 224, 87);
+}
+
 .Productimage{
 display: flex;
 padding: 5px;
@@ -38,6 +53,6 @@ align-items: center;
 justify-content: center;
 }
 .Productimage>img{
-    max-width: 450px;
+    max-width: 400px;
     max-height: 500px;
 }

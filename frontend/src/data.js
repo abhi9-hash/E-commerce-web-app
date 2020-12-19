@@ -21,6 +21,7 @@ rating: 3
 },
 {
     id:100003,
+    stock:5,
     category: 'mobile',
     title: 'Redmi Note 8 Pro (Halo White, 128 GB)  (6 GB RAM)',
     price: 18999, 
