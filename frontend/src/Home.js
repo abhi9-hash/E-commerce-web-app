@@ -4,6 +4,7 @@ import data from './data.js';
 import './Home.css'
 function Home() {
     return (
+        
         <div className='home'>
                 {
                 data.products.map((i)=>(
