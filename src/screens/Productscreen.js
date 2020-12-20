@@ -1,7 +1,7 @@
 import React from 'react'
-import data from '../data'
+import data from '../components/data'
 import {Link} from 'react-router-dom'
-import Header from '../Header';
+import Header from '../components/Header';
 import './Productscreen.css'
 export default function Productscreen(props) {
     const product=data.products.find((x)=>x.id==props.match.params.id)

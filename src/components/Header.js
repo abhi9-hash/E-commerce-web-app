@@ -7,7 +7,7 @@ function Header() {
             <div  className='header_logo'>E-COM 🛒</div>
             <div className='header_search'>
                 <input className='header_search_input' placeholder='search'  type='text'></input>
-                <SearchIcon className='header_search_icon'/>
+               <button className='header_search_button'><SearchIcon className='header_search_icon'/></button>
             </div>
             <div className='header_nav'>
                 <div className='header_nav_option1'>

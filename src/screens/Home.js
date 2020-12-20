@@ -1,7 +1,7 @@
 import React from 'react';
-import Productcard from '../Productcard'
-import data from '../data.js';
-import Header from '../Header'
+import Productcard from '../components/Productcard'
+import data from '../components/data.js';
+import Header from '../components/Header'
 import './Home.css'
 function Home() {
     return (
