@@ -11,10 +11,10 @@
     background:white;
 }
 .product:hover{
-    box-shadow: 8px 8px 8px 8px rgba(9, 108, 153, 0.7);
+    box-shadow: 2px 2px 5px 8px rgba(9, 108, 153, 0.7);
 }
 .product::shadow{
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.7);
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.7);
 }
 
 .product>img{
