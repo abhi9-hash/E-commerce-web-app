@@ -15,5 +15,3 @@ res.send('server hass started')
 app.listen(5000,()=>{
     console.log('port 5000')
 });
-
-export {express}
