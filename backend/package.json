@@ -1,0 +1,19 @@
+{
+  "name": "backend",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "express backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.io/abhi9-hasg/E-commerce-web-app"
+  },
+  "author": "abhi9-hash",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
