@@ -3,9 +3,10 @@
   "type": "module",
   "version": "1.0.0",
   "description": "express backend",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "react-scripts build",
+    "test": "nodemon --watch backend --exec node --experimental-modules backend/server.js"
   },
   "repository": {
     "type": "git",
@@ -14,6 +15,7 @@
   "author": "abhi9-hash",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "react": "^17.0.1"
   }
 }
