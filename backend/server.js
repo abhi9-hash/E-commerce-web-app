@@ -1,6 +1,6 @@
 import Express from 'express'
 
-import data from "./data.js";
+import data from "./../src/components/data.mjs";
 
 const app=Express();
 

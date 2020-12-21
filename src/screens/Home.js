@@ -1,6 +1,6 @@
 import React from 'react';
 import Productcard from '../components/Productcard'
-import data from '../components/data.js';
+import data from '../components/data.mjs';
 import Header from '../components/Header'
 import './Home.css'
 function Home() {

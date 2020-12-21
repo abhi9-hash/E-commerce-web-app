@@ -1,5 +1,5 @@
 import React from 'react'
-import data from '../components/data'
+import data from '../components/data.mjs'
 import {Link} from 'react-router-dom'
 import Header from '../components/Header';
 import './Productscreen.css'
