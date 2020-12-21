@@ -1,8 +1,12 @@
+import {Link} from 'react-router-dom'
 import React from 'react'
 import './Productcard.css'
+import { pathToFileURL } from 'url'
+import { PassThrough } from 'stream'
 function Productcard({id,category,title,price,rating,image}) {
     return (
-        <div className='product'>
+      
+            <a  href={`/product/${id}`} className='product'>
             <div className='productid'>
                 <small>{id}</small>
             </div>
@@ -20,7 +24,9 @@ function Productcard({id,category,title,price,rating,image}) {
             </div>
              <img  src={image} alt=''/>
 <button><strong>Add to Cart</strong></button>          
-        </div>
+      </a>
+        
+       
     )
 }
 

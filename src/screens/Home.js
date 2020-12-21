@@ -1,15 +1,23 @@
-import React from 'react';
+import React,{ useState,useEffect} from 'react';
 import Productcard from '../components/Productcard'
-import data from '../components/data.mjs';
+import axios from 'axios';
 import Header from '../components/Header'
 import './Home.css'
 function Home() {
+    const [Products, setProducts] = useState([]);
+    useEffect(() => {
+    const fetchData= async ()=>{
+    const {data}= await axios.get('/products/api');
+    setProducts(data);
+    };
+        fetchData();
+    }, [])
     return (
         <div>
         <Header/>
         <div className='home'>
                 {
-                data.products.map((i)=>(
+                Products.map((i)=>(
                 <Productcard
                 key={i.id}
                 id={i.id}
