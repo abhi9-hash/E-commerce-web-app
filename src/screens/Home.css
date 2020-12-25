@@ -24,11 +24,11 @@
     display:grid;
     width:90%;
     border-radius: 30px;
-    border:5px solid rgb(82, 170, 166);
+    border:5px solid rgba(82, 170, 166,0.4);
     margin: 0 auto;
     grid-template-rows:repeat(auto-fit,minmax(300px,500px)); 
     grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
-    background-color: rgb(82, 170, 166);
+    background-color: rgba(82, 170, 166, 0.7);
     grid-row-gap: 5vh;
     grid-column-gap:5vw;
     padding-top: 60px;
