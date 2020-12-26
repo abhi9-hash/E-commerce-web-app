@@ -1,6 +1,6 @@
 import Express from 'express'
 
-import data from "./../src/components/data.mjs";
+import data from "./data.js";
 
 const app=Express();
 
@@ -9,7 +9,7 @@ app.get('/products/api',(req,res)=>{
     });
 
 app.get('/',(req,res)=>{
-res.send('server hass started')
+res.send('server has started')
 });
 
 app.listen(5000,()=>{

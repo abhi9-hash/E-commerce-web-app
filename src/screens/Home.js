@@ -1,31 +1,27 @@
-import React,{ useState,useEffect} from 'react';
+import React,{ useEffect} from 'react';
 import Productcard from '../components/Productcard'
 import LoadingBox from '../components/LoadingBox'
 import MessagingBox from '../components/MessagingBox'
-import axios from 'axios';
 import Header from '../components/Header'
 import './Home.css'
-function Home() {
-    const [Products, setProducts] = useState([]);
-    const [Loading, setLoading] = useState(false);
-    const [Error, setError] = useState(false);
+import { useDispatch, useSelector } from 'react-redux'
+import { listProducts } from './actions/productActions'
+
+export default function Home() {
+
+    const dispatch = useDispatch();
+
     useEffect(() => {
-    const fetchData= async ()=>{
-        try{
-    const {data}= await axios.get('/products/api');
-    setProducts(data);
-    }catch(err){
-        setError(err.message);
-        setLoading(false);
-    }
-    };
-        fetchData();
-    }, [])
+    dispatch(listProducts());
+    }, [dispatch]);
+    const productList = useSelector((state) => state.productList);
+    const {Loading, Error,  Products} = productList;
+
     return (
         <div>
             {Loading?(<LoadingBox></LoadingBox>
             ):
-             Error?(<MessagingBox>{Error}</MessagingBox>)
+            Error?(<MessagingBox>{Error}</MessagingBox>)
              :(
                  <div>
                 <Header/>
@@ -49,4 +45,4 @@ function Home() {
              ) 
                     }
 
-export default Home
+ 
