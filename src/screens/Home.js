@@ -11,11 +11,13 @@ export default function Home() {
 
     const dispatch = useDispatch();
 
-    useEffect(() => {
-    dispatch(listProducts());
-    }, [dispatch]);
     const productList = useSelector((state) => state.productList);
-    const {Loading, Error,  Products} = productList;
+    const { Loading, Error,  Products } = productList;
+
+    
+    useEffect(() => {
+        dispatch(listProducts());
+        },[dispatch]);
 
     return (
         <div>
@@ -29,7 +31,6 @@ export default function Home() {
                         {
                         Products.map((i)=>(
                         <Productcard
-                        key={i.id}
                         id={i.id}
                         category={i.category}
                         title={i.title}

@@ -1,12 +1,9 @@
-import {Link} from 'react-router-dom'
 import React from 'react'
 import './Productcard.css'
-import { pathToFileURL } from 'url'
-import { PassThrough } from 'stream'
 function Productcard({id,category,title,price,rating,image}) {
     return (
       
-            <a  href={`/product/${id}`} className='product'>
+            <a  href={`/products/${id}`} className='product'>
             <div className='productid'>
                 <small>{id}</small>
             </div>
