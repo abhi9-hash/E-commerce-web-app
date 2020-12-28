@@ -1,6 +1,6 @@
-import {PRODUCT_LIST_REQUEST,
+const {PRODUCT_LIST_REQUEST,
        PRODUCT_LIST_SUCCESS,
-       PRODUCT_LIST_FAIL} from  "../constants/productConstants"
+       PRODUCT_LIST_FAIL}  = require('../constants/productConstants')
 const {PRODUCT_DETAILS_REQUEST,PRODUCT_DETAILS_SUCCESS,PRODUCT_DETAILS_FAIL}= require('../constants/productConstants')       
 export const productlistReducers=( state ={ Loading:true, Products: {} }, action)=> {
     switch(action.type){

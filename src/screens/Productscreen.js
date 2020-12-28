@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import {Link} from 'react-router-dom'
 import Header from '../components/Header';
 import './Productscreen.css'
@@ -11,6 +11,7 @@ export default function Productscreen(props){
 
     const dispatch= useDispatch();
     const id= props.match.params.id;
+    const [qty, setQty] = useState(1);
 
     useEffect(()=>{
         dispatch(DetailsProduct(id));
@@ -18,6 +19,10 @@ export default function Productscreen(props){
 
     const productDetails = useSelector(state=>state.productDetails);
     const { Loading, Error, Product } = productDetails;
+
+    const addToCartHandler = () => {
+        props.history.push(`/cart/${id}?qty=${qty}`);
+    }
     
     
 
@@ -54,7 +59,30 @@ export default function Productscreen(props){
      
              <div className="Productinfo2">
                  <p>Rs. <b>{Product.price}</b></p>
-                 <button ><b>Add To Cart</b></button>
+                 {Product.stock > 0 && (
+                    <div className="qtyinfo">
+                        Qty: 
+                            <select
+                              value={qty}
+                              onChange={(e) => setQty(e.target.value)}
+                            >
+                              {[...Array(Product.stock).keys()].map(
+                                (x) => (
+                                  <option key={x + 1} value={x + 1}>
+                                    {x + 1}
+                                  </option>
+                                )
+                              )}
+                            </select>
+                          
+                    
+                        <button
+                          onClick={addToCartHandler}
+                        >
+                          Add to Cart
+                        </button>
+                      </div>
+                  )}
                  <p>Ratings {Array(Product.rating).fill().map((_,i)=>(<div>⭐</div>))}</p>
              </div>
              </div>
@@ -64,4 +92,4 @@ export default function Productscreen(props){
         </div>
     )
             }
-            
+        
