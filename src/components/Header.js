@@ -1,10 +1,15 @@
 import React from 'react'
 import './Header.css'
 import SearchIcon from '@material-ui/icons/Search'
+import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
+import {Link} from 'react-router-dom'
+import { useSelector } from 'react-redux';
 function Header() {
+    const cart = useSelector((state) => state.cart);
+    const { cartItems } = cart;
     return (
         <div className='header'>
-            <div  className='header_logo'>E-COM 🛒</div>
+            <Link to="/" className='header_logo'>E-COM</Link>
             <div className='header_search'>
                 <input className='header_search_input' placeholder='search'  type='text'></input>
                <button className='header_search_button'><SearchIcon className='header_search_icon'/></button>
@@ -22,9 +27,14 @@ function Header() {
                     <span> orders</span>
                 </div>
             </div>
-            <div className='header_cart'>
-                    <h2>🛒 0</h2>
-                </div>
+            <Link to="/cart" className='header_cart'>
+                    <h2>
+                        <ShoppingBasketIcon color="white"/>
+                        {cartItems.length > 0? (
+                        <span className="badge">{cartItems.length}</span>
+                        ):0}
+                    </h2>
+                </Link>
         </div>
         
 

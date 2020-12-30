@@ -79,7 +79,7 @@ export default function Productscreen(props){
                         <button
                           onClick={addToCartHandler}
                         >
-                          Add to Cart
+                          <b>Add to Cart</b>
                         </button>
                       </div>
                   )}

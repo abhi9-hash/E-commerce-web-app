@@ -12,6 +12,12 @@
     font-family: Arial, Helvetica, sans-serif;
     
 }
+input:hover,
+select:hover,
+textarea:hover,
+button:hover {
+  border: 0.1rem #404040 solid;
+}
 .header_search{
  display: flex;
  align-self:right;
@@ -21,9 +27,13 @@
  min-width: 40%;
 }
 .header_logo{
- display: flex;
- margin-left: 5px;
- color:white;
+    text-decoration: white;
+    background-color: #161899;
+    color: #ffffff;
+    border-radius: 50%;
+    padding: 0.2rem 0.7rem;
+    font-size: 1.4rem;
+    margin-left: 0.2rem;
 }
 
 .header_search_input{
@@ -59,5 +69,17 @@
  margin-right: 1vw;
 }
 .header_cart{
+    text-decoration: white;
     margin-right: 1vw;
 }
+.header_cart{
+    color: white;
+}
+.badge {
+    background-color: #161899;
+    color: #ffffff;
+    border-radius: 50%;
+    padding: 0.2rem 0.7rem;
+    font-size: 1.4rem;
+    margin-left: 0.2rem;
+  }
