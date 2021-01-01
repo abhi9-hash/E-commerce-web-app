@@ -6,6 +6,7 @@ import LoadingBox from '../components/LoadingBox';
 import MessagingBox from '../components/MessagingBox';
 import { useDispatch, useSelector } from 'react-redux';
 import { DetailsProduct } from './actions/productActions';
+import Footer from '../components/Footer';
 
 export default function Productscreen(props){
 
@@ -32,7 +33,7 @@ export default function Productscreen(props){
             ):
             Error?(<MessagingBox>{Error}</MessagingBox>):(
                 <div>
-                <div className='headr'>
+                <div className='Header'>
                 <div className="header1"><Header/>
                 <Link to="/"> Back</Link></div>
                 <div className="header2">
@@ -86,6 +87,7 @@ export default function Productscreen(props){
                  <p>Ratings {Array(Product.rating).fill().map((_,i)=>(<div>⭐</div>))}</p>
              </div>
              </div>
+             <Footer/>
              </div>
              ) 
                 }

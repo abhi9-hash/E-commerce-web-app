@@ -16,7 +16,7 @@ rating: 3
                 category: 'mobile',
                 title: 'Redmi Note 7 Pro (Nebula Red, 128 GB)  (6 GB RAM)',
                 price: 10999 ,
-                image: 'https://rukminim1.flixcart.com/image/832/832/k0lbdzk0pkrrdj/mobile/5/8/h/mi-redmi-note-7-pro-mzb7463in-original-imafeybchwasdygf.jpeg?q:70',
+                image: 'https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-redmi-note-7-pro-1.jpg',
                 rating: 4
 },
 {

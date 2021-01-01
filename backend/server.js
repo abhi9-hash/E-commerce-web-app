@@ -4,6 +4,8 @@ import data from "./data.mjs";
 
 const app=Express();
 
+
+
 app.get('/products/:id',(req,res)=>{
         const Product=data.products.find((x)=>x.id==req.params.id)
         if(Product){
