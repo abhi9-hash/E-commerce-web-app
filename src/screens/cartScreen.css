@@ -56,6 +56,12 @@ img{
     cursor: pointer;
 }
 
+.deleteButton{
+    background-color: transparent;
+    width: fit-content;
+    border:none;
+}
+
 .proceedToPay,.checkOut{
     display: flex;
     justify-content: center;

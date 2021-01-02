@@ -7,6 +7,7 @@ import Header from '../components/Header'
 import Footer from '../components/Footer';
 import DeleteIcon from '@material-ui/icons/Delete';
 import "./cartScreen.css"
+import { CenterFocusStrong } from '@material-ui/icons';
 
 
 export default function CartScreen(props) {
@@ -71,8 +72,8 @@ export default function CartScreen(props) {
                   </div>
                   <div>Rs. {item.price}</div>
                   <button type="button" 
-                      onClick={()=>removeFromCartHandler(item.productID)}>
-                      delete
+                      onClick={()=>removeFromCartHandler(item.productID)} className="deleteButton">
+                      <DeleteIcon/>
                   </button>
               </div>
             ))}
