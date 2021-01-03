@@ -15,7 +15,11 @@
   "author": "abhi9-hash",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.0.0",
+    "bcryptjs": "^2.4.3",
     "express": "^4.17.1",
+    "express-async-handler": "^1.1.4",
+    "mongoose": "^5.11.9",
     "react": "^17.0.1"
   }
 }

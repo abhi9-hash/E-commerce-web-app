@@ -7,7 +7,6 @@ import Header from '../components/Header'
 import Footer from '../components/Footer';
 import DeleteIcon from '@material-ui/icons/Delete';
 import "./cartScreen.css"
-import { CenterFocusStrong } from '@material-ui/icons';
 
 
 export default function CartScreen(props) {

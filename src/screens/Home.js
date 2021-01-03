@@ -32,7 +32,7 @@ export default function Home() {
                         {
                         Products.map((i)=>(
                         <Productcard
-                        id={i.id}
+                        id={i._id}
                         category={i.category}
                         title={i.title}
                         price={i.price} 

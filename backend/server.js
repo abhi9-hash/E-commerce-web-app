@@ -1,28 +1,26 @@
 import Express, { request } from 'express'
-
+import mongoose from 'mongoose';
 import data from "./data.mjs";
+import userRouter from './routers/userRouter.js';
+import productRouter from './routers/productRouter.js';
 
 const app=Express();
 
+mongoose.connect('mongodb://localhost/e-com', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true
+  });
 
-
-app.get('/products/:id',(req,res)=>{
-        const Product=data.products.find((x)=>x.id==req.params.id)
-        if(Product){
-            res.send(Product)
-        }
-        else{
-            res.status(404).send({message:'PRODUCT NOT FOUND'})
-        }
-        });
-
-app.get('/products',(req,res)=>{
-            res.send(data.products)
-            });
-          
+app.use('/users', userRouter);
+app.use('/products', productRouter);
 app.get('/',(req,res)=>{
 res.send('server has started')
 });
+
+app.use((err, req, res, next) => {
+    res.status(500).send({ message: err.message });
+  });
 
 app.listen(5000,()=>{
     console.log('port 5000')

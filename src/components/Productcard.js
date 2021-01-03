@@ -1,6 +1,5 @@
 import React from 'react'
 import './Productcard.css'
-import addToCartHandler from '../screens/Productscreen'
 import {Link} from 'react-router-dom'
 function Productcard({id,category,title,price,rating,image}) {
     return (
