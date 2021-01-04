@@ -1,0 +1,16 @@
+.footer{
+   
+    display: flex;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    z-index: 100;
+    background: rgb(24, 64, 241);
+    color: white;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}

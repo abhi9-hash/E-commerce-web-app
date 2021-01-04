@@ -11,3 +11,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.alert{
+  padding: 1rem;
+  border: .1rem solid transparent;
+  background-color: thistle;
+  color: brown;
+}
