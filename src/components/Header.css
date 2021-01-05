@@ -9,8 +9,7 @@
     position:fixed;
     z-index: 100;
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    
+    font-family: Arial, Helvetica, sans-serif; 
 }
 input:hover,
 select:hover,
@@ -48,9 +47,9 @@ button:hover,
  border-radius: 10px;
 }
 .header_search_button{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+display: flex;
+align-items: center;
+justify-content: center;
  color:silver ;
  background-color: transparent;
  border: 1px solid silver;
@@ -70,6 +69,8 @@ button:hover,
 }
 .header_nav_option1{
  margin-right: 1vw;
+ text-decoration: white;
+ color: white;
 }
 .header_cart{
     display: flex;

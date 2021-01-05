@@ -17,14 +17,14 @@ function Header() {
                 <button className='header_search_button'><SearchIcon className='header_search_icon'/></button>
             </div>
             <div className='header_nav'>
-                <div className='header_nav_option1'>
+            <Link to="/signin" className='header_nav_option1'>
                 <div>
                      <span > Hello Guest</span>
                     </div>
                     <div>
                     <span > SignIn</span>
                     </div>
-            </div>
+            </Link>
                 <div className='header_nav_option2'>
                     <span> orders</span>
                 </div>
