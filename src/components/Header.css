@@ -16,10 +16,15 @@ select:hover,
 textarea:hover,
 button:hover,
 .header_nav_option1:hover,
-.header_nav_option2:hover,
-.header_cart:hover {
-  border: 0.1rem #072299 solid;
+.header_nav_option2:hover
+ {
+  border: 0.1rem rgba(32, 15, 129, 0.7) solid;
   cursor: pointer;
+}
+.header_cart_div:hover{
+    height:50px;
+    border: 0.1rem rgba(255, 255, 255, 0.7) solid;
+    cursor: pointer;  
 }
 .header_search{
  display: flex;
@@ -64,11 +69,11 @@ justify-content: center;
 .header_nav{
  color:white;
  display: flex;
- justify-content:space-between;
+ justify-content:space-evenly;
  align-items: center;
  margin-right: 1vw;
 }
-.header_nav_option1{
+.header_nav_option1,.header_nav_option2{
  margin-right: 1vw;
  display: flex;
  justify-content: center;
@@ -84,21 +89,19 @@ justify-content: center;
     margin-bottom: .1px;
     font-size: 1rem;
 }
+.header_cart_div{
+    height: fit-content;
+
+}
 .header_cart{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 50%;
     text-decoration: white;
     color: white;
-    margin-right: 1vw;
-    height: 50%;
 }
 .badge {
     background-color: #161899;
     color: #ffffff;
     border-radius: 100%;
-    padding: .2rem, .7 rem;
-    font-size: 1.4rem;
     margin-left: 0.2rem;
   }
 .signOut,.signIn{

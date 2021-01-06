@@ -21,10 +21,10 @@ function Header() {
     return (
         <div className='header'>
             <Link to="/" className='header_logo'><img src="../../public/logo.png"></img></Link>
-            <div className='header_search'>
+            {/* <div className='header_search'>
                 <input className='header_search_input' placeholder='search'  type='text' onChange={(e)=>setSearch(e.target.value)}></input>
                 <button className='header_search_button'><SearchIcon className='header_search_icon'/></button>
-            </div>
+            </div> */}
             <div className='header_nav'>
             <div className='header_nav_option1'>
             {userInfo ? (
@@ -42,8 +42,8 @@ function Header() {
                 <div className='header_nav_option2'>
                     <span> orders</span>
                 </div>
-            </div>
-            <Link to="/cart" className='header_cart'>
+                <div className="header_cart_div">
+                <Link to="/cart" className='header_cart'>
                     <h2>
                         <ShoppingBasketIcon color="white"/>
                         {cartItems.length > 0? (
@@ -51,6 +51,9 @@ function Header() {
                         ):0}
                     </h2>
                 </Link>
+                </div>
+            </div>
+            
         </div>
         
 

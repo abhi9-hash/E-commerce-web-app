@@ -1,0 +1,45 @@
+
+.signInScreen{
+    display: flex;
+    align-content: center;
+    justify-content: space-evenly;
+}
+
+.form {
+    font-style:bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: space-between;
+    text-align: center;
+    border:solid 8px rgba(82, 170, 166,0.8);
+    border-radius: 50px;
+    position: relative;
+    margin: 70px auto;
+    width: 80%;
+  }
+  .form > div {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    justify-items: center;
+    align-items: center;
+  }
+  .form label {
+    margin: 1rem 0;
+    display: block;
+  }
+  .form input{
+      height:25px;
+      width: 60%;
+  }
+  .form button{
+    width: fit-content;
+    font-size: small ;
+    background-color:rgb(224, 224, 87);
+    height:25px;
+  
+  }
+  .form h1{
+    color:rgba(19, 59, 170, 1);
+  }
