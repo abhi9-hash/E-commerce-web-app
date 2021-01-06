@@ -29,15 +29,16 @@
     display: block;
   }
   .form input{
+      height:25px;
       width: 60%;
   }
   .form button{
     width: fit-content;
     font-size: small ;
     background-color:rgb(224, 224, 87);
-    width:25%;
+    height:25px;
+  
   }
   .form h1{
-    margin-top: 60px;
     color:rgba(19, 59, 170, 1);
   }
