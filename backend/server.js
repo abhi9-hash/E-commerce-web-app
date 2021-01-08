@@ -1,12 +1,15 @@
 import Express, { request } from 'express'
 import mongoose from 'mongoose';
-import data from "./data.mjs";
 import userRouter from './routers/userRouter.js';
 import productRouter from './routers/productRouter.js';
+import dotenv from 'dotenv';
 
+dotenv.config();
 const app=Express();
+app.use(Express.json());
+app.use(Express.urlencoded({ extended: true }));
 
-mongoose.connect('mongodb://localhost/e-com', {
+mongoose.connect( process.env.MONGODB_URL||'mongodb://localhost/e-com', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true
