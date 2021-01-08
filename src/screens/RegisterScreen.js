@@ -5,6 +5,8 @@ import { register } from './actions/userAction';
 import LoadingBox from '../components/LoadingBox';
 import MessagingBox from '../components/MessagingBox';
 import './register.css'
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 export default function RegisterScreen(props) {
   const [name, setName] = useState('');
@@ -34,7 +36,10 @@ export default function RegisterScreen(props) {
     }
   }, [props.history, redirect, userInfo]);
   return (
-    <div>
+    <div className="registerScreen">
+        <div>
+        <Header/>
+        </div>    
       <form className="form" onSubmit={submitHandler}>
         <div>
           <h1>Create Account</h1>
@@ -83,7 +88,7 @@ export default function RegisterScreen(props) {
         </div>
         <div>
           <label />
-          <button className="primary" type="submit">
+          <button type="submit">
             Register
           </button>
         </div>
@@ -95,6 +100,7 @@ export default function RegisterScreen(props) {
           </div>
         </div>
       </form>
+    <Footer/>
     </div>
   );
 }

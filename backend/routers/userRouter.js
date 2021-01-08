@@ -4,6 +4,7 @@ import expressAsyncHandler from "express-async-handler";
 import User from '../models/userModel.js';
 import bcrypt from 'bcryptjs';
 import { generateToken } from '../utils.js';
+import fs from 'fs';
 
 const userRouter = express.Router();
 
@@ -40,6 +41,7 @@ userRouter.post(
         email: req.body.email,
         password: bcrypt.hashSync(req.body.password, 8),
       });
+
       const createdUser = await user.save();
       res.send({
         _id: createdUser._id,
@@ -48,6 +50,7 @@ userRouter.post(
         isAdmin: createdUser.isAdmin,
         token: generateToken(createdUser),
       });
+      data.users.push(createdUser)
     })
   );
 export default userRouter;
