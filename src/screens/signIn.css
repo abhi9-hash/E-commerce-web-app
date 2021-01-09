@@ -14,7 +14,7 @@
     border:solid 8px rgba(82, 170, 166,0.8);
     border-radius: 50px;
     position: relative;
-    margin: 70px auto;
+    margin: 20px auto;
     width: 80%;
   }
   .form > div {
@@ -29,8 +29,14 @@
     display: block;
   }
   .form input{
+      background-color: rgba(82, 170, 166,0.2);
       height:25px;
       width: 60%;
+      border:transparent;
+  }
+
+  .form input:hover{
+    border: 0.1rem rgba(19, 5, 59, 0.7) solid;
   }
   .form button{
     width: fit-content;

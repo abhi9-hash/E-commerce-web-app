@@ -1,0 +1,22 @@
+.checkoutSteps{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 80%;
+    justify-content:space-around;
+    margin: 20px auto ;
+}
+
+.checkoutSteps>div{
+    width:25%;
+    border-top: 5px solid lightgrey;
+    color:lightgrey;
+
+}
+
+.checkoutSteps>div.active{
+    border-top: 5px solid orangered;
+    color: orangered;
+
+}

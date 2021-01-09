@@ -27,7 +27,6 @@ export default function Home() {
             Error?(<MessagingBox>{Error}</MessagingBox>)
              :(
                  <div>
-                <Header/>
                 <div className='home'>
                         {
                         Products.map((i)=>(
@@ -42,7 +41,6 @@ export default function Home() {
                         ))
                         }
                </div>
-               <Footer/>
             </div>)}
             
         </div>

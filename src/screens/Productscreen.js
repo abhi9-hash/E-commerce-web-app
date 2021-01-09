@@ -34,8 +34,6 @@ export default function Productscreen(props){
             Error?(<MessagingBox>{Error}</MessagingBox>):(
                 <div>
                 <div className='Header'>
-                <div className="header1"><Header/>
-                <Link to="/"> Back</Link></div>
                 <div className="header2">
                 <Link to="/">Back</Link></div>
                 </div>
@@ -87,7 +85,6 @@ export default function Productscreen(props){
                  <p>Ratings {Array(Product.rating).fill().map((_,i)=>(<div>⭐</div>))}</p>
              </div>
              </div>
-             <Footer/>
              </div>
              ) 
                 }

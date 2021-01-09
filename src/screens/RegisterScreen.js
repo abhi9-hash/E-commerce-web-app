@@ -38,7 +38,6 @@ export default function RegisterScreen(props) {
   return (
     <div className="registerScreen">
         <div>
-        <Header/>
         </div>    
       <form className="form" onSubmit={submitHandler}>
         <div>
@@ -100,7 +99,6 @@ export default function RegisterScreen(props) {
           </div>
         </div>
       </form>
-    <Footer/>
     </div>
   );
 }

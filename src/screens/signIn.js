@@ -30,7 +30,6 @@ export default function SigninScreen(props) {
   }, [props.history, redirect, userInfo]);
   return (
     <div className="signInScreen">
-      <Header/>  
       <form className="form" onSubmit={submitHandler}>
         <div>
           <h1>Sign In</h1>
@@ -71,8 +70,7 @@ export default function SigninScreen(props) {
             </Link>
           </div>
         </div>
-      </form>
-     <Footer/> 
+      </form> 
     </div>
   );
 }

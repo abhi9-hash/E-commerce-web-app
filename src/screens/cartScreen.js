@@ -3,8 +3,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import MessagingBox from '../components/MessagingBox';
 import { addToCart, removeFromCart } from './actions/cartActions';
-import Header from '../components/Header'
-import Footer from '../components/Footer';
 import DeleteIcon from '@material-ui/icons/Delete';
 import "./cartScreen.css"
 
@@ -28,11 +26,10 @@ export default function CartScreen(props) {
   };
 
   const checkoutHandler = () => {
-    props.history.push('/signin?redirect=shipping');
+    props.history.push(`/signin?redirect=shipping`);
   };
   return (
     <div className="cartScreen">
-      <div className="header"><Header/></div>
       <h1>Shopping Cart</h1>
       <div className="gridBody">
         {cartItems.length === 0 ? (
@@ -99,7 +96,6 @@ export default function CartScreen(props) {
               </div>
         </div>
       </div>
-      <Footer/>
     </div>
   );
 }
