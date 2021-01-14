@@ -1,0 +1,39 @@
+.grid{
+    margin:0 auto;
+}
+.grid-1{
+
+    margin:10px auto  50px auto;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(290px,1fr));
+    grid-template-rows:repeat(auto-fit,minmax(500px,1fr));
+    grid-row-gap: 5vh;
+    grid-column-gap:5vw; 
+}
+
+.grid-1>div>div{
+    border:solid 4px rgba(82, 170, 166,0.8);
+    text-align: center;
+    border-radius: 50px;
+    margin:0px 0px 10px 0px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    padding: 1.5vh 1.5vw;
+}
+.grid-1>div>div>h2{
+    color:rgba(19, 59, 170, 1);
+
+}
+
+.grid-1>div{
+    margin-bottom: 30px;
+}
+.grid-1>div>div>button{
+    background-color:  rgb(224, 224, 87);
+    margin-top: 5px;
+    width:60%;
+    border-radius: 50px;
+}
