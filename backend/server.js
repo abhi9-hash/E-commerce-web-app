@@ -18,7 +18,7 @@ mongoose.connect( process.env.MONGODB_URL||'mongodb://localhost/e-com', {
 
 app.use('/users', userRouter);
 app.use('/products', productRouter);
-app.use('/api/orders', orderRouter);
+app.use('/orders', orderRouter);
 app.get('/',(req,res)=>{
 res.send('server has started')
 });
