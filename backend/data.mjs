@@ -42,7 +42,7 @@ rating: 3
     category: 'mobile',
     title: 'Redmi Note 8 Pro (Halo White, 128 GB)  (6 GB RAM)',
     price: 18999, 
-    image: 'https://rukminim1.flixcart.com/image/832/832/k5lcvbk0pkrrdj/mobile-refurbished/s/7/x/redmi-note-8-pro-64-c-m1906g7i-mi-6-original-imafhgsa77msdgng.jpeg?q:70',
+    image: 'https://www.reliancedigital.in/medias/Xiaomi-NOTE-8-Smart-Phones-491894232-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3wxNTk2MzV8aW1hZ2UvanBlZ3xpbWFnZXMvaDgxL2gyZi85MzMyNDY4MzgzNzc0LmpwZ3xlMWNjMjBlNDBhNjY0N2ViYzhkYjdiNWEyYjFjZDE5ODc2MjBlZTRiZTliYjE4MjgwNDEwN2QwNDBiOWY4YzAw',
     rating: 5
 },
 {

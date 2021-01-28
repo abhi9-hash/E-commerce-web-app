@@ -1,3 +1,4 @@
+
 .grid{
     margin:0 auto;
 }
@@ -13,7 +14,8 @@
 }
 
 .grid-1>div>div{
-    border:solid 4px rgba(82, 170, 166,0.8);
+    background-color: rgba(219, 240, 240, 0.8);
+    /* border:solid 4px rgba(82, 170, 166,0.8); */
     text-align: center;
     border-radius: 50px;
     margin:0px 0px 10px 0px;

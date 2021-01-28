@@ -36,8 +36,8 @@ function PlaceOrderScreen(props) {
             <CheckoutSteps step1 step2 step3 step4/>
             <div className="grid">
             <div className="grid-1"> 
-             <div className="col-1">
-              <div className="card card-body">
+             <div >
+              <div >
                 <h2>Shipping</h2>
                 <p>
                   <strong>Name:</strong> {cart.shippingAddress.fullName} <br />
@@ -46,27 +46,26 @@ function PlaceOrderScreen(props) {
                   ,{cart.shippingAddress.country}
                 </p>
               </div>
-              <div className="card card-body">
+              <div >
                 <h2>Payment</h2>
                 <p>
                   <strong>Method:</strong> {cart.paymentMethod}
                 </p>
               </div>
-              <div className="card card-body">
+              <div >
                 <h2>Order Items</h2>
                 
                   {cart.cartItems.map((item) => (
                     <div key={item.product}>
-                      <div className="row">
+                      <div >
                         <div>
                           <img
                             src={item.image}
                             alt={item.name}
-                            className="small"
                           ></img>
                         </div>
-                        <div className="min-30">
-                          <Link styles="text-decoration:none" to={`/products/${item.productID}`}>
+                        <div >
+                          <Link Style="text-decoration:black" to={`/products/${item.productID}`}>
                             {item.name}
                           </Link>
                         </div>
@@ -80,18 +79,18 @@ function PlaceOrderScreen(props) {
               </div>
           
         </div>
-        <div className="col-1">
-          <div className="card card-body">
+        <div >
+          <div >
                 <h2>Order Summary</h2>
-                <div className="row">
+                <div >
                 <strong> Items Price</strong>
                   <div>Rs.{cart.Price.toFixed(2)}</div>
                 </div>
-                <div className="row">
+                <div>
                 <strong> Shipping Price</strong>
                   <div>Rs.{cart.shippingPrice.toFixed(2)}</div>
                 </div>
-                <div className="row">
+                <div >
                   <div>
                     <strong> Order Total</strong>
                   </div>
@@ -102,7 +101,6 @@ function PlaceOrderScreen(props) {
                 <button
                   type="button"
                   onClick={placeOrderHandler}
-                  className="primary block"
                   disabled={cart.cartItems.length === 0}
                 >
                   <b>Place Order</b>

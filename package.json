@@ -15,11 +15,14 @@
     "react": "^17.0.1",
     "react-bootstrap": "^1.4.0",
     "react-dom": "^17.0.1",
+    "react-paypal-button": "^4.1.1",
+    "react-paypal-button-v2": "^2.6.2",
     "react-redux": "^7.2.2",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0",
+    "v2": "0.0.3",
     "web-vitals": "^0.2.4"
   },
   "scripts": {

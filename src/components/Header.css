@@ -17,9 +17,10 @@ select:hover,
 textarea:hover,
 button:hover,
 .header_nav_option1:hover,
-.header_nav_option2:hover
+.header_nav_option2:hover,
+Nav:hover
  {
-  border: 0.1rem rgba(19, 5, 59, 0.7) solid;
+  color: rgba(19, 5, 59, 0.7) ;
   cursor: pointer;
 }
 .header_cart_div:hover{
@@ -96,6 +97,10 @@ justify-content: center;
 }
 .header_cart{
     height: 50%;
+   
+    color: white;
+}
+.header_cart:hover{
     text-decoration: white;
     color: white;
 }
@@ -110,3 +115,22 @@ justify-content: center;
     color: white;
     
 }
+.MenuIcon{
+    display: none;
+}
+#menu-box{
+    display: none;
+}
+@media(max-width:600px){
+    
+    .MenuIcon{
+        display: inherit;
+    } 
+    .MenuIcon button{
+        background-color: transparent;
+        border-color: transparent;
+        color:white
+    } 
+    
+}
+

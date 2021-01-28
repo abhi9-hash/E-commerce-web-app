@@ -8,10 +8,14 @@
     justify-content: space-evenly;
     align-items: center;
     z-index: 1;
-    background:white;
+    background:rgba(219, 240, 240, 0.8);
+    
 }
 .product:hover{
-    box-shadow: 2px 2px 5px 8px rgba(9, 108, 153, 0.7);
+    box-shadow: 10px 10px 5px rgb(82, 93, 190);
+    text-decoration: black;
+    color: inherit;
+    transform: translateX(6px);
 }
 
 .product::shadow{

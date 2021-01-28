@@ -5,8 +5,11 @@ import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 import {Link} from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
-import { Button, Dropdown, ButtonGroup  } from 'react-bootstrap';
+import { Button, Dropdown, Menu, Item, Toggle, ButtonGroup, Nav, NavDropdown, Navbar, FormControl, Form ,Collapse } from 'react-bootstrap';
 import { signout } from '../screens/actions/userAction';
+import MenuIcon from '@material-ui/icons/Menu'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function Header() {
     const cart = useSelector((state) => state.cart);
@@ -18,70 +21,56 @@ function Header() {
         dispatch(signout());
     };
     const [search,setSearch]=useState("")
+
     return (
         <div className='header'>
-            <Link to="/" className='header_logo'><img src="../../public/logo.svg"></img></Link>
-            {/* <div className='header_search'>
-                <input className='header_search_input' placeholder='search'  type='text' onChange={(e)=>setSearch(e.target.value)}></input>
-                <button className='header_search_button'><SearchIcon className='header_search_icon'/></button>
-            </div> 
-
-
-
-
-
-
-
-
-
-
-            <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark">
-  <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+          <Navbar collapseOnSelect expand="lg" bg="primary" fixed="top" variant="dark">
+  
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="mr-auto">
-      <Nav.Link href="#features">Features</Nav.Link>
-      <Nav.Link href="#pricing">Pricing</Nav.Link>
-      <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-        <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-        <NavDropdown.Divider />
-        <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-      </NavDropdown>
-    </Nav>
-    <Nav>
-      <Form inline>
-      <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-      <Button variant="outline-light" text-color="basic"  >Search</Button>
-    </Form>
+      <Nav.Link color="white" href="/orders">Orders</Nav.Link>
+      <Nav.Link href="/cart"><ShoppingBasketIcon color="white"/>
+                        {cartItems.length > 0? (
+                        <span className="badge">{cartItems.length}</span>
+                        ):0}</Nav.Link>
+      
     </Nav>
   </Navbar.Collapse>
+  <Nav className="mr-5">{userInfo ? (
+               <Dropdown as={ButtonGroup}>
+               <Button id="dropdown-button" >{userInfo.name}</Button>
+               <Dropdown.Toggle></Dropdown.Toggle>               
+               <Dropdown.Menu>
+                 <Dropdown.Item  className="signOut"  onClick={signoutHandler}>Sign Out</Dropdown.Item>
+               </Dropdown.Menu>
+             </Dropdown> 
+            ) : (
+              <Link to="/signin" className="signIn">
+                 <span>Hello Guest,</span>  <br></br>
+                  <span>Sign In</span></Link>
+            )}
+            </Nav>
+            <nav></nav>
+<Navbar.Brand href="/">  E-comm</Navbar.Brand>
 </Navbar>
+
+
+ 
+
+
+
+            {/* <Link to=" " className='header_logo'><img src="../../public/logo.svg"></img></Link>
             
-            
-
-            
-
-
-
-
-
-*/
-
-
-            
-            }
             <div className='header_nav'>
             <div className='header_nav_option1'>
             {userInfo ? (
                <Dropdown as={ButtonGroup}>
                <Button id="dropdown-button" variant="success">{userInfo.name}</Button>
              
-               <Dropdown.Toggle split variant="success" id="dropdown-split-basic" />
-             
+               <Dropdown.Toggle>⬇</Dropdown.Toggle>               
                <Dropdown.Menu>
-                 <Dropdown.Item href="#/action-3" className="signOut" to="#signout" onClick={signoutHandler}>Sign Out</Dropdown.Item>
+                 <Dropdown.Item  className="signOut" to="#signout" onClick={signoutHandler}>Sign Out</Dropdown.Item>
                </Dropdown.Menu>
              </Dropdown> 
             ) : (
@@ -104,7 +93,7 @@ function Header() {
                 </Link>
                 </div>
             </div>
-            
+             */}
         </div>
         
 

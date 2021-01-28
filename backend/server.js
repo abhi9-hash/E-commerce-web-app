@@ -18,7 +18,10 @@ mongoose.connect( process.env.MONGODB_URL||'mongodb://localhost/e-com', {
 
 app.use('/users', userRouter);
 app.use('/products', productRouter);
-app.use('/orders', orderRouter);
+app.use('/order', orderRouter);
+app.get('/config/paypal',(req,res)=>{
+  res.send(process.env.PAYPAL_CLIENT_ID||'sb')
+})
 app.get('/',(req,res)=>{
 res.send('server has started')
 });

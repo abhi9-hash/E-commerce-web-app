@@ -35,7 +35,7 @@ export default function Productscreen(props){
                 <div>
                 <div className='Header'>
                 <div className="header2">
-                <Link to="/">Back</Link></div>
+                <a href="javascript:history.back()">Back</a></div>
                 </div>
                 
              
