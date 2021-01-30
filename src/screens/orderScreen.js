@@ -7,13 +7,20 @@ import CheckoutSteps from '../components/CheckoutSteps'
 import "./placeOrderScreen.css";
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessagingBox';
-import { DetailsOrder } from './actions/orderAction';
+import { DetailsOrder, payOrder } from './actions/orderAction';
+import {ORDER_PAY_RESET} from './constants/orderConstants'
 
 function OrderScreen(props) {
   const orderID=props.match.params.id;
   const [sdkReady, setSdkReady] = useState(false);
   const orderDetails=useSelector((state)=>state.orderDetails);
   const { order, loading, error } = orderDetails;
+  const orderPay = useSelector((state) => state.orderPay);
+  const {
+    loading: loadingPay,
+    error: errorPay,
+    success: successPay,
+  } = orderPay;
    
     const dispatch = useDispatch();
    
@@ -29,7 +36,8 @@ function OrderScreen(props) {
         };
         document.body.appendChild(script);
       };
-      if (!order) {
+      if (!order || successPay || (order && order._id !== orderID)) {
+        dispatch({ type: ORDER_PAY_RESET });
         dispatch(DetailsOrder(orderID));
       } else {
         if (!order.isPaid) {
@@ -42,8 +50,8 @@ function OrderScreen(props) {
       }
     }, [dispatch, order, orderID, sdkReady]);
   
-    const successPaymentHnadler = () => {
-      // TODO: dispatch pay order
+    const successPaymentHandler = (paymentResult) => {
+      dispatch(payOrder(order, paymentResult));
     };
   return (loading ? (
     <LoadingBox></LoadingBox>
@@ -130,14 +138,20 @@ function OrderScreen(props) {
                     <strong>Rs.{order.totalPrice.toFixed(2)}</strong>
                   </div>
                   {!order.isPaid && (
-                <div>
+                <div Style="z-index:-1">
                   {!sdkReady ? (
                     <LoadingBox></LoadingBox>
                   ) : (
+                    <>
+                    {errorPay && (
+                      <MessageBox >{errorPay}</MessageBox>
+                    )}
+                    {loadingPay && <LoadingBox></LoadingBox>}
                     <PayPalButton
-                      amount={order.totalPrice}
-                      onSuccess={successPaymentHnadler}
-                    ></PayPalButton>
+                    amount={order.totalPrice}
+                    onSuccess={successPaymentHandler}
+                  ></PayPalButton>
+                </>
                   )}
                 </div>
               )}

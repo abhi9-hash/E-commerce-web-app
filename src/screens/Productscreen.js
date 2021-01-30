@@ -1,12 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import {Link} from 'react-router-dom'
-import Header from '../components/Header';
 import './Productscreen.css'
 import LoadingBox from '../components/LoadingBox';
 import MessagingBox from '../components/MessagingBox';
 import { useDispatch, useSelector } from 'react-redux';
 import { DetailsProduct } from './actions/productActions';
-import Footer from '../components/Footer';
 
 export default function Productscreen(props){
 
@@ -34,8 +31,7 @@ export default function Productscreen(props){
             Error?(<MessagingBox>{Error}</MessagingBox>):(
                 <div>
                 <div className='Header'>
-                <div className="header2">
-                <a href="javascript:history.back()">Back</a></div>
+                
                 </div>
                 
              

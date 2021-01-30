@@ -12,7 +12,7 @@
     
 }
 .product:hover{
-    box-shadow: 10px 10px 5px rgb(82, 93, 190);
+    box-shadow: 10px 10px 5px rgb(50, 125, 223);
     text-decoration: black;
     color: inherit;
     transform: translateX(6px);
