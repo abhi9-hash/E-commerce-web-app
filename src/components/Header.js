@@ -7,6 +7,8 @@ import { signout } from '../screens/actions/userAction';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
+import ProfileScreen from '../screens/ProfileScreen';
+import { Link } from '@material-ui/core';
 
 
 function Header() {
@@ -18,6 +20,7 @@ function Header() {
     const signoutHandler = () => {
         dispatch(signout());
     };
+  
     const [data ,setData] = useState([]);
     const [filtered ,setFilterd] = useState([]);
     const [result , setResult] = useState("");
@@ -65,7 +68,7 @@ function Header() {
 </Nav>
 <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="mr-auto">
-      <Nav.Link  href="/orders">Orders</Nav.Link>
+      <Nav.Link  href="/orderhistory">Orders</Nav.Link>
       <Nav.Link href="/cart" ><ShoppingBasketIcon color="white"/>
                         {cartItems.length > 0? (
                         <span className="badge">{cartItems.length}</span>
@@ -75,24 +78,27 @@ function Header() {
    
     <Nav className="mr-2 " size="sm">
     {userInfo ? (
-      <Nav.Link>
+      <>
+      <Nav.Link href="/profile"><Button  className="text-left" id="dropdown-button" >{userInfo.name}</Button></Nav.Link>
+      <Nav.Link >
                <Dropdown as={ButtonGroup}>
-               <Button  className="text-left" id="dropdown-button" >{userInfo.name}</Button>
+               
                <Dropdown.Toggle></Dropdown.Toggle>               
                <Dropdown.Menu>
                  <Dropdown.Item  className="signOut"  onClick={signoutHandler}>Sign Out</Dropdown.Item>
                </Dropdown.Menu>
              </Dropdown> 
              </Nav.Link>
-            ) : (
+             </>) : (
               <Nav.Link class="color-white" href="/signin" className="signIn">
                  <span>Hello ! Sign In,</span>  </Nav.Link>
             )}
             
             </Nav>
+            <Navbar.Brand  href="/">  <b>E-Comm</b></Navbar.Brand>
   </Navbar.Collapse>
   
-<Navbar.Brand  href="/">  <b>E-Comm</b></Navbar.Brand>
+
 
       
 </Navbar>

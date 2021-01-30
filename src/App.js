@@ -10,8 +10,11 @@ import shippingScreen from './screens/shippingScreen';
 import paymentScreen from './screens/paymentScreen';
 import orderScreen from './screens/orderScreen';
 import placeOrderScreen from './screens/placeOrderScreen';
+import OrderHistoryScreen from './screens/OrderHistoryScreen';
 import Header from './components/Header';
+import PrivateRoute from './components/PrivateRoute';
 import Footer from './components/Footer';
+import ProfileScreen from './screens/ProfileScreen';
 
 function App() {
 
@@ -20,13 +23,20 @@ function App() {
     <div className="App">
     <Header/>
     <Route path="/cart/:id?" component={cartScreen}/>
-    <Route path="/products/:id" component={Productscreen}/>
+    <Route path="/products/:id?" component={Productscreen}/>
     <Route path="/signin" component={SigninScreen}></Route>
     <Route path="/register" component={RegisterScreen}></Route>
     <Route path="/shipping" component={shippingScreen}></Route>
     <Route path="/payment" component={paymentScreen}></Route>
+    
+    <Route path="/orderhistory" component={OrderHistoryScreen}></Route>
     <Route path="/order/:id?" component={orderScreen}></Route>
+    <PrivateRoute
+            path="/profile"
+            component={ProfileScreen}
+          ></PrivateRoute>
     <Route path="/placeorder" component={placeOrderScreen}></Route>
+
     <Route path="/" component={Home} exact/>
     <Footer/>
     </div>
