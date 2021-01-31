@@ -7,8 +7,6 @@ import { signout } from '../screens/actions/userAction';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
-import ProfileScreen from '../screens/ProfileScreen';
-import { Link } from '@material-ui/core';
 
 
 function Header() {
@@ -96,11 +94,7 @@ function Header() {
             
             </Nav>
             <Navbar.Brand  href="/">  <b>E-Comm</b></Navbar.Brand>
-  </Navbar.Collapse>
-  
-
-
-      
+  </Navbar.Collapse>      
 </Navbar>
 <br></br>
 <br></br>
@@ -115,50 +109,7 @@ function Header() {
             ):""}
             </div>
       </>
-
-
-
-            {/* <Link to=" " className='header_logo'><img src="../../public/logo.svg"></img></Link>
-            
-            <div className='header_nav'>
-            <div className='header_nav_option1'>
-            {userInfo ? (
-               <Dropdown as={ButtonGroup}>
-               <Button id="dropdown-button" variant="success">{userInfo.name}</Button>
-             
-               <Dropdown.Toggle>⬇</Dropdown.Toggle>               
-               <Dropdown.Menu>
-                 <Dropdown.Item  className="signOut" to="#signout" onClick={signoutHandler}>Sign Out</Dropdown.Item>
-               </Dropdown.Menu>
-             </Dropdown> 
-            ) : (
-              <Link to="/signin" className="signIn">
-                  <span>Hello Guest, </span><br></br>
-                  <span>Sign In</span></Link>
-            )}
-            </div>
-                <div className='header_nav_option2'>
-                    <span> orders</span>
-                </div>
-                <div className="header_cart_div">
-                <Link to="/cart" className='header_cart'>
-                    <h2>
-                        <ShoppingBasketIcon color="white"/>
-                        {cartItems.length > 0? (
-                        <span className="badge">{cartItems.length}</span>
-                        ):0}
-                    </h2>
-                </Link>
-                </div>
-            </div>
-             */}
-
-
-        </div>
-
-        
-        
-
+</div>    
     )
 }
 
