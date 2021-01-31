@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import {Link} from 'react-router-dom'
-import Header from '../components/Header';
 import './Productscreen.css'
 import LoadingBox from '../components/LoadingBox';
 import MessagingBox from '../components/MessagingBox';
 import { useDispatch, useSelector } from 'react-redux';
-import { DetailsProduct } from './actions/productActions';
-import Footer from '../components/Footer';
+import { DetailsProduct, listProducts } from './actions/productActions';
+import RelatedProducts from '../components/RelatedProducts';
 
 export default function Productscreen(props){
 
@@ -16,10 +14,14 @@ export default function Productscreen(props){
 
     useEffect(()=>{
         dispatch(DetailsProduct(id));
+        dispatch(listProducts());
     },[dispatch,id]);
 
     const productDetails = useSelector(state=>state.productDetails);
     const { Loading, Error, Product } = productDetails;
+
+    const productList = useSelector((state) => state.productList);
+    const { Loading1, Error1,  Products } = productList;
 
     const addToCartHandler = () => {
         props.history.push(`/cart/${id}?qty=${qty}`);
@@ -33,12 +35,7 @@ export default function Productscreen(props){
             ):
             Error?(<MessagingBox>{Error}</MessagingBox>):(
                 <div>
-                <div className='Header'>
-                <div className="header1"><Header/>
-                <Link to="/"> Back</Link></div>
-                <div className="header2">
-                <Link to="/">Back</Link></div>
-                </div>
+                
                 
              
              <div className="page-grid">
@@ -87,7 +84,8 @@ export default function Productscreen(props){
                  <p>Ratings {Array(Product.rating).fill().map((_,i)=>(<div>⭐</div>))}</p>
              </div>
              </div>
-             <Footer/>
+             <div Style="width:100%;margin:0, auto;"><RelatedProducts />
+             </div>
              </div>
              ) 
                 }

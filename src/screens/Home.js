@@ -2,11 +2,9 @@ import React,{ useEffect} from 'react';
 import Productcard from '../components/Productcard'
 import LoadingBox from '../components/LoadingBox'
 import MessagingBox from '../components/MessagingBox'
-import Header from '../components/Header'
 import './Home.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { listProducts } from './actions/productActions'
-import Footer from '../components/Footer';
 
 export default function Home() {
 
@@ -27,7 +25,6 @@ export default function Home() {
             Error?(<MessagingBox>{Error}</MessagingBox>)
              :(
                  <div>
-                <Header/>
                 <div className='home'>
                         {
                         Products.map((i)=>(
@@ -42,7 +39,6 @@ export default function Home() {
                         ))
                         }
                </div>
-               <Footer/>
             </div>)}
             
         </div>
