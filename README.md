@@ -1,4 +1,8 @@
 # E-commerce-web-app
+![snap1](./image/img1.png)
+
+![snap2](./image/img2.png)
+
 This repository contains an e-commerce web application made in MERN.
 
 # Features
