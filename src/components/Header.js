@@ -7,7 +7,7 @@ import { signout } from '../screens/actions/userAction';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
-import BASEURL from '../constant'
+import {BASEURL} from '../constant'
 
 
 function Header() {
