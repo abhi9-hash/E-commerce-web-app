@@ -8,6 +8,7 @@ import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
 import {BASEURL, CLIENTURL} from '../constant'
+import { Link } from 'react-router-dom';
 
 
 function Header() {
@@ -104,7 +105,7 @@ function Header() {
 <div class="card-cover">
 {result?(data.map((r,i)=> (   
                 <ul key={i}>
-                <li ><a href={CLIENTURL+"/products/"+r._id}> {r.title}</a></li>
+                <li ><Link to={"/products/"+r._id}> {r.title}</Link></li>
                 </ul>)
             )
             ):""}

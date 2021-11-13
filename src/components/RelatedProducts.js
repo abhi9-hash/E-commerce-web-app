@@ -31,7 +31,7 @@ function RelatedProducts() {
         <Carousel breakPoints={breakPoints}>
             {data.map((x,i)=>(                
                 <Item key={i}>  
-                  <a href={`${CLIENTURL}/products/${x._id}`} Style="display:flex; justify-content:center; align-items:center"><img  Style="max-height: 40%; max-width:50%;" src={x.image}></img>
+                  <a href={`/products/${x._id}`} Style="display:flex; justify-content:center; align-items:center"><img  Style="max-height: 40%; max-width:50%;" src={x.image}></img>
                   </a>
                  </Item>
             ))}
