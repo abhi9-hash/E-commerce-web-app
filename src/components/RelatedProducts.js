@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 import Carousel from "react-elastic-carousel";
-import { BASEURL } from "../constant";
+import { BASEURL, CLIENTURL } from "../constant";
 import Item from "./Item";
 
 const breakPoints = [
@@ -31,7 +31,7 @@ function RelatedProducts() {
         <Carousel breakPoints={breakPoints}>
             {data.map((x,i)=>(                
                 <Item key={i}>  
-                  <a href={`/products/${x._id}`} Style="display:flex; justify-content:center; align-items:center"><img  Style="max-height: 40%; max-width:50%;" src={x.image}></img>
+                  <a href={`${CLIENTURL}/products/${x._id}`} Style="display:flex; justify-content:center; align-items:center"><img  Style="max-height: 40%; max-width:50%;" src={x.image}></img>
                   </a>
                  </Item>
             ))}
