@@ -12,7 +12,7 @@ This repository contains an e-commerce web application made in MERN.
 - Redux store to fetch state 
 - Customer Profile and Update info 
 - Payment gateway integration 
-- OAuth (SSO) 
+- Auth using JWT 
 - Order Details and Customer Orders
 
 # Tech stack and concepts
