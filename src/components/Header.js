@@ -7,6 +7,7 @@ import { signout } from '../screens/actions/userAction';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
+import BASEURL from '../constant.js'
 
 
 function Header() {
@@ -32,7 +33,7 @@ function Header() {
      useEffect(()=>{
       const fetchData = async ()=> {
               try{
-                  const res = await axios.get('/products');
+                  const res = await axios.get(`${BASEURL}/products`);
                   setData(res.data);
                   setFilterd(res.data);
               }catch(err){

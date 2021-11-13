@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 import Carousel from "react-elastic-carousel";
+import { BASEURL } from "../constant";
 import Item from "./Item";
 
 const breakPoints = [
@@ -16,7 +17,7 @@ function RelatedProducts() {
   useEffect(()=>{
     const fetchData = async ()=> {
             try{
-                const res = await axios.get('/products');
+                const res = await axios.get(`${BASEURL}/products`);
                 setData(res.data);
             }catch(err){
                 throw new Error(err);

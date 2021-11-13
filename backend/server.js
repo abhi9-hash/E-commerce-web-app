@@ -4,11 +4,13 @@ import userRouter from './routers/userRouter.js';
 import productRouter from './routers/productRouter.js';
 import dotenv from 'dotenv';
 import orderRouter from './routers/orderRouter.js';
+import cors from 'cors';
 
 dotenv.config();
 const app=Express();
 app.use(Express.json());
 app.use(Express.urlencoded({ extended: true }));
+app.use(cors())
 
 mongoose.connect( process.env.MONGODB_URL||'mongodb://localhost/e-com', {
     useNewUrlParser: true,

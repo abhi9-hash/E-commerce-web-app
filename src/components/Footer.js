@@ -4,7 +4,7 @@ import "./Footer.css"
 function Footer() {
     return (
         <div className="footer">
-            Made for winter project
+            Made by Abhinav Pathak
  
         </div>
     )
