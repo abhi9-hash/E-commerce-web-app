@@ -27,6 +27,9 @@
     "v2": "0.0.3",
     "web-vitals": "^0.2.4"
   },
+      "engines": {
+    "node": "14.7.x"
+  }
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
