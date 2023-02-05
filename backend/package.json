@@ -11,6 +11,9 @@
     "type": "git",
     "url": "https://github.io/abhi9-hasg/E-commerce-web-app"
   },
+    "engines": {
+    "node": "14.7.x"
+  }
   "author": "abhi9-hash",
   "license": "ISC",
   "dependencies": {
