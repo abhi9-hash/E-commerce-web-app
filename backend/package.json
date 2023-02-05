@@ -13,7 +13,7 @@
   },
     "engines": {
     "node": "14.7.x"
-  }
+  },
   "author": "abhi9-hash",
   "license": "ISC",
   "dependencies": {
