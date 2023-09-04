@@ -1,4 +1,4 @@
-import Express, { request } from 'express'
+import Express from 'express'
 import mongoose from 'mongoose';
 import userRouter from './routers/userRouter.js';
 import productRouter from './routers/productRouter.js';
